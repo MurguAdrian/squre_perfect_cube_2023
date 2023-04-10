@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_final_locals
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -7,19 +9,18 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: true,
       home: HomePage(),
     );
   }
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -80,15 +81,12 @@ class _HomePageState extends State<HomePage> {
             if (x * x == input) {
               rezultat1 = 'Este patrat perfect , dar nu este Cub Perfect';
             } else {
-
               rezultat1 = 'Nu este patrat perfect';
             }
 
             if (y * y * y == input) {
-
               rezultat2 = 'Este Cub Perfect, dar nu este Patrat Perfect';
             } else {
-
               rezultat2 = 'Nu este Cub Perfect';
             }
             if (y * y * y == input && x * x == input) {
@@ -109,7 +107,8 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           rezultat,
                           style: const TextStyle(fontSize: 32),
-                        ),Text(
+                        ),
+                        Text(
                           rezultat1,
                           style: const TextStyle(fontSize: 15),
                         ),
